@@ -14,8 +14,8 @@ ulimit -s unlimited
 cd /lustre/home/acct-hpc/hpclzy/centos/osu_gnu_openmpi/libexec/osu-micro-benchmarks/mpi/collective
 source ~/centos/gnu.sh                                                          
 
-mpirun -n 1792 osu_bcast
-mpirun -n 1792 osu_allgather
-mpirun -n 1792 osu_allreduce
-mpirun -n 1792 osu_scatter
-mpirun -n 1792 osu_reduce
+mpirun -n 1792 --bind-to core osu_bcast
+mpirun -n 1792 --bind-to core osu_allgather
+mpirun -n 1792 --bind-to core osu_allreduce
+mpirun -n 1792 --bind-to core osu_scatter
+mpirun -n 1792 --bind-to core osu_reduce
