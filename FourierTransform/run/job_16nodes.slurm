@@ -6,7 +6,6 @@
 #SBATCH --error=16nodes_ft.err
 #SBATCH -n 128
 #SBATCH --exclusive
-##SBATCH --nodelist=kp[054-055]
 #SBATCH --ntasks-per-node=8
 
 ulimit -s unlimited
